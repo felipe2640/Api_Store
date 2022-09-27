@@ -1,0 +1,15 @@
+@contentType = application/json
+
+PUT    http://localhost:3000/client HTTP/1.1
+Content-Type: {{contentType}}
+
+{   
+    "client_id": 5,
+    "name": "felipe",
+    "cpf": "12345678910",
+    "phone": "8543651431",
+    "email": "felipe@felipe.com",
+    "adress": "rua x, n 100"
+
+    
+}
