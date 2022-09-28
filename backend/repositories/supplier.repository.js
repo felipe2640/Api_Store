@@ -31,7 +31,7 @@ async function getSupplier(id) {
     try {
         const res = await conn.query("SELECT * FROM suppliers WHERE suppliers_id = $1", [id])
         if (res.rows[0] === undefined) {
-            throw new Error("Usuário não encontrado");
+            throw new Error("Suppliers não encontrado");
         } else {
             return res.rows[0]
 
@@ -50,7 +50,7 @@ async function updateSupplier(supplier) {
         const values = [supplier.name, supplier.cnpj, supplier.phone, supplier.email, supplier.adress, supplier.supplier_id]
         const res = await conn.query(sql, values)
         if (res.rows[0] === undefined) {
-            throw new Error("Usuário não encontrado");
+            throw new Error("Suppliers não encontrado");
         } else {
             return res.rows[0]
 
