@@ -1,0 +1,14 @@
+@contentType = application/json
+
+POST    http://localhost:3000/product HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "Product",
+    "description": "Any",
+    "value": 45.45,
+    "stock": 2,
+    "supplier_id": 1
+
+    
+}

@@ -1,0 +1,15 @@
+@contentType = application/json
+
+PUT    http://localhost:3000/product HTTP/1.1
+Content-Type: {{contentType}}
+
+{   
+    "product_id": 1,
+    "supplier_id": 1,
+    "name": "Product",
+    "description": "Any",
+    "value": "45.45",
+    "stock": 2
+
+    
+}
