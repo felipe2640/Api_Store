@@ -1,5 +1,7 @@
 # dependencies
 /node_modules
+/log
+/config
 
 
 # dotenv environment variable files
