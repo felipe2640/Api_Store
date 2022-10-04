@@ -3,8 +3,8 @@ async function createSale(req, res, next) {
 	try {
 		let sale = req.body;
 		if (
-			!sale.client_id ||
-			!sale.product_id ||
+			!sale.clientId ||
+			!sale.productId ||
 			!sale.value ||
 			!sale.date
 		) {

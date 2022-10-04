@@ -56,7 +56,7 @@ async function updateClient(req, res, next) {
 			!client.phone ||
 			!client.email ||
 			!client.adress ||
-			!client.client_id
+			!client.clientId
 		) {
 			throw new Error("Name,CPF, PHONE, Email, e Address são obrigatórios.");
 		}

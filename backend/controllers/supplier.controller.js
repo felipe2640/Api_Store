@@ -56,7 +56,7 @@ async function updateSupplier(req, res, next) {
 			!supplier.phone ||
 			!supplier.email ||
 			!supplier.adress ||
-			!supplier.supplier_id
+			!supplier.supplierId
 		) {
 			throw new Error("Name,CNPJ, PHONE, Email, ID, e Address são obrigatórios.");
 		}

@@ -8,7 +8,7 @@ Content-Type: {{contentType}}
     "description": "Any",
     "value": 45.45,
     "stock": 2,
-    "supplier_id": 1
+    "supplierId": 1
 
     
 }

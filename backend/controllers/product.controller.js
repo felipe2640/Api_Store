@@ -7,7 +7,7 @@ async function createProduct(req, res, next) {
 			!product.description ||
 			!product.value ||
 			!product.stock ||
-			!product.supplier_id
+			!product.supplierId
 		) {
 			throw new Error("Name,Description , Value, Stock, e Suppler id são obrigatórios.");
 		}
@@ -55,8 +55,8 @@ async function updateProduct(req, res, next) {
 			!product.description ||
 			!product.value ||
 			!product.stock ||
-			!product.product_id ||
-			!product.supplier_id
+			!product.productId ||
+			!product.supplierId
 		) {
 			throw new Error("Name, Description , Value, Stock, Product id, e Suppler id são obrigatórios.");
 		}
