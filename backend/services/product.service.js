@@ -2,7 +2,7 @@ import ProductRepository from "../repositories/product.repository.js"
 
 import SupplierRepository from "../repositories/supplier.repository.js"
 async function createProduct(product) {
-    if (await SupplierRepository.getSupplier(product.supplier_id)) {
+    if (await SupplierRepository.getSupplier(product.supplierId)) {
         return await ProductRepository.insertProduct(product)
     }
 
@@ -21,7 +21,7 @@ async function deleteProduct(id) {
 
 
 async function updateProduct(product) {
-    if (await SupplierRepository.getSupplier(product.supplier_id)) {
+    if (await SupplierRepository.getSupplier(product.supplierId)) {
         return await ProductRepository.updateProduct(product)
     }
 }

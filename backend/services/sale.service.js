@@ -3,8 +3,8 @@ import SaleRepository from "../repositories/sale.repository.js"
 import ProductRepository from "../repositories/product.repository.js"
 
 async function createSale(sale) {
-    if (await ClientRepository.getClient(sale.client_id)) {
-        const product = await ProductRepository.getProduct(sale.product_id)
+    if (await ClientRepository.getClient(sale.clientId)) {
+        const product = await ProductRepository.getProduct(sale.productId)
         if (product > 0) {
             sale = await SaleRepository.insertSale(sale)
             product.stock--;
@@ -17,7 +17,7 @@ async function createSale(sale) {
 }
 async function getSales(productId) {
     if (productId) {
-        const product = await ProductRepository.getProduct(sale.product_id)
+        const product = await ProductRepository.getProduct(sale.productId)
         if (product) {
             return await SaleRepository.getSalebyProductId(productId)
         }
@@ -34,8 +34,8 @@ async function getSale(id) {
 async function deleteSale(id) {
     const sale = await SaleRepository.getSale(id)
     if (sale) {
-        if (await ClientRepository.getClient(sale.client_id)) {
-            const product = await ProductRepository.getProduct(sale.product_id)
+        if (await ClientRepository.getClient(sale.clientId)) {
+            const product = await ProductRepository.getProduct(sale.productId)
             if (product) {
                 product.stock++;
                 await ProductRepository.updateProduct(product)
